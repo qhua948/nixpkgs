@@ -36,6 +36,15 @@ with lib;
       type = types.lines;
     };
 
+    boot.useUbuntuModprobeConfig = mkOption {
+      default = true;
+      example = "true";
+      description = lib.mdDoc ''
+        Whether to use modprobe.conf from `pkgs.kmod-blacklist-ubuntu`.
+      '';
+      type = types.bool;
+    };
+
   };
 
 
